@@ -198,7 +198,7 @@ const Index = () => {
           </div>
 
           <Tabs defaultValue="works" className="animate-fade-in">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
+            <TabsList className="grid w-full max-w-2xl mx-auto grid-cols-3 mb-8">
               <TabsTrigger value="works" className="text-base">
                 <Icon name="Library" size={18} className="mr-2" />
                 Произведения
@@ -206,6 +206,10 @@ const Index = () => {
               <TabsTrigger value="biography" className="text-base">
                 <Icon name="Clock" size={18} className="mr-2" />
                 Биография
+              </TabsTrigger>
+              <TabsTrigger value="video" className="text-base">
+                <Icon name="Play" size={18} className="mr-2" />
+                Видео
               </TabsTrigger>
             </TabsList>
 
@@ -281,6 +285,30 @@ const Index = () => {
                   </div>
                 </div>
               )}
+            </TabsContent>
+
+            <TabsContent value="video" className="space-y-6">
+              <div className="max-w-4xl mx-auto">
+                <Card className="overflow-hidden">
+                  <CardHeader>
+                    <CardTitle className="text-3xl">О жизни и творчестве Пушкина</CardTitle>
+                    <CardDescription className="text-base">
+                      Документальный фильм о великом поэте
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+                      <iframe
+                        src="https://rutube.ru/play/embed/b71f2d7f6a9c67a26264233ede86014c"
+                        frameBorder="0"
+                        allow="clipboard-write; autoplay"
+                        allowFullScreen
+                        className="absolute top-0 left-0 w-full h-full"
+                      />
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </TabsContent>
           </Tabs>
         </div>
